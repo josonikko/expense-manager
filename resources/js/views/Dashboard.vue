@@ -1,9 +1,12 @@
 <template>
-    <div class="white-container">
-        <div class="row">
-            <h1 class="col-sm-6">Dashboard</h1>
+    <div>
+        <AppHeader></AppHeader>
+        <div class="white-container">
+            <div class="row">
+                <h1 class="col-sm-6">Dashboard</h1>
+            </div>
+            <vc-donut :sections="sections" :thickness="25" hasLegend legendPlacement="right">Total Expense:{{ total }}</vc-donut>
         </div>
-        <vc-donut :sections="sections" :thickness="25" hasLegend legendPlacement="right">Total Expense:{{ total }}</vc-donut>
     </div>
     
 </template>

@@ -1,23 +1,23 @@
 <template>
-    <div class="white-container">
-        <h1>Change Password</h1>
-        <hr>
-        <div class="col-sm-6 offset-sm-3">
-            <div class="form-group">
-                <label>New Password</label>
-                <input type="text" class="form-control" v-model="password" placeholder="Your new password">
-            </div>
-            <div class="form-group">
-                <label>New Password</label>
-                <input type="text" class="form-control" v-model="confirmPassword" placeholder="Should match password">
-            </div>
+    <div>
+        <AppHeader></AppHeader>
+        <div class="white-container">
+            <h1>Change Password</h1>
+            <hr>
+            <div class="col-sm-6 offset-sm-3">
+                <div class="form-group">
+                    <label>New Password</label>
+                    <input type="text" class="form-control" v-model="password" placeholder="Your new password">
+                </div>
+                <div class="form-group">
+                    <label>New Password</label>
+                    <input type="text" class="form-control" v-model="confirmPassword" placeholder="Should match password">
+                </div>
 
-            <button v-if="isPasswordMatch" v-on:click="changePassword" class="btn btn-success">Change Password</button>
-            <small v-else>**New passwords should match</small>
+                <button v-if="isPasswordMatch" v-on:click="changePassword" class="btn btn-success">Change Password</button>
+                <small v-else>**New passwords should match</small>
+            </div>
         </div>
-
-
-
     </div>
 </template>
 

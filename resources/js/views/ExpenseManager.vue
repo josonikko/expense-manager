@@ -1,48 +1,51 @@
 <template>
-    <div class="white-container">
-        <div class="row">
-            <h1 class="col-sm-4">Expenses Manager</h1>
-            <div class="col-sm-8 text-right">
-                <label>Add Expenses:</label>
-                <input type="text" v-model="description" class="form-control inline" placeholder="Description">
-                <input type="text" v-model="amount" class="form-control inline" placeholder="Amount" width="100px">
-                <select v-model="category" class="form-control inline">
-                    <option v-for="cat in categories" v-bind:value="cat.id" >{{cat.name}}</option>
-                </select>
-                <button v-on:click="addExpense" class="btn btn-success">
-                    Add Expense
-                </button>
+    <div>
+        <AppHeader></AppHeader>
+        <div class="white-container">
+            <div class="row">
+                <h1 class="col-sm-4">Expenses Manager</h1>
+                <div class="col-sm-8 text-right">
+                    <label>Add Expenses:</label>
+                    <input type="text" v-model="description" class="form-control inline" placeholder="Description">
+                    <input type="text" v-model="amount" class="form-control inline" placeholder="Amount" width="100px">
+                    <select v-model="category" class="form-control inline">
+                        <option v-for="cat in categories" v-bind:value="cat.id" >{{cat.name}}</option>
+                    </select>
+                    <button v-on:click="addExpense" class="btn btn-success">
+                        Add Expense
+                    </button>
+                </div>
             </div>
+            <hr>
+            
+            <div class="col-sm-12">
+                <h3>Current Expenses: {{total.toFixed(2)}}</h3>
+                <table class="table table-hover table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <expense-item v-for="expense in expenses" :key="expense.id" :expense="expense"></expense-item>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <b>{{ total.toFixed(2) }}</b>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
         </div>
-        <hr>
-        
-        <div class="col-sm-12">
-            <h3>Current Expenses: {{total.toFixed(2)}}</h3>
-            <table class="table table-hover table-bordered table-striped">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>Description</th>
-                        <th>Category</th>
-                        <th>Date</th>
-                        <th>Amount</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <expense-item v-for="expense in expenses" :key="expense.id" :expense="expense"></expense-item>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <b>{{ total.toFixed(2) }}</b>
-                        </td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
     </div>
 </template>
 

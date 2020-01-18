@@ -4,7 +4,7 @@
         <router-link :to="{ name: 'hello' }">Hello World</router-link>
     </p> -->
     <div class="container">
-        <AppHeader></AppHeader>
+        <!-- <AppHeader></AppHeader> -->
         <router-view></router-view>
     </div>
 </template>

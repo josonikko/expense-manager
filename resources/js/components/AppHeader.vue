@@ -38,9 +38,10 @@ export default {
     },
     computed:{
         isAdmin () {
-            if (typeof this.user != "undefined") {
+            if (typeof this.user != "undefined" && this.user != null) {
                 return this.user.role_id === 1;
             }
+            return false;
         },
         isLoggedIn() {
             return this.$route.path !== '/';
