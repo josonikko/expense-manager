@@ -1,0 +1,39 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+body{
+    padding-top: 20px;
+    background-color: #fff !important;
+}
+.white-container{
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+.login-container{
+    margin-top: 7%;
+}
+
+.menu-container{
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+.form-control.inline{
+    display: inline;
+    width: initial;
+}
+.form-control.inline-block{
+    display: inline-block;
+}
+.vue-Message-Detail{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
