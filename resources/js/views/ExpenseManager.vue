@@ -17,7 +17,7 @@
         <hr>
         
         <div class="col-sm-12">
-            <h3>Current Expenses: {{total}}</h3>
+            <h3>Current Expenses: {{total.toFixed(2)}}</h3>
             <table class="table table-hover table-bordered table-striped">
                 <thead class="thead-dark">
                     <tr>

@@ -41,7 +41,7 @@ export default {
                 total += e.amount;
             })
 
-            this.total = total;
+            this.total = total.toFixed(2);
             this.categoryData = categoryData;
         },
         assignData() {

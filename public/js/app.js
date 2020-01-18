@@ -2313,7 +2313,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         categoryData[e.category_name] = categoryData[e.category_name] + parseFloat(e.amount);
         total += e.amount;
       });
-      this.total = total;
+      this.total = total.toFixed(2);
       this.categoryData = categoryData;
     },
     assignData: function assignData() {
@@ -7428,7 +7428,7 @@ var render = function() {
     _c("hr"),
     _vm._v(" "),
     _c("div", { staticClass: "col-sm-12" }, [
-      _c("h3", [_vm._v("Current Expenses: " + _vm._s(_vm.total))]),
+      _c("h3", [_vm._v("Current Expenses: " + _vm._s(_vm.total.toFixed(2)))]),
       _vm._v(" "),
       _c(
         "table",
@@ -66078,8 +66078,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\expense\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\expense\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\expense-manager\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\expense-manager\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
